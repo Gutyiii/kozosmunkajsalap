@@ -1,10 +1,12 @@
 //var nev = document.getElementById("adat").value;
 
 function paros(tomb) {
+    document.getElementById("parosSzamok").innerHTML = "A páros számok: ";
     for (var i = 0; i < tomb.length; i++) {
-        if (tomb[i] % 2 === 0) {            
+        if (tomb[i] % 2 === 0) {
+            document.getElementById("parosSzamok").innerHTML += tomb[i] + ", ";
         }
-    } document.getElementById("parosSzamok").innerHTML = "A páros számok: " + i;
+    } 
 }
 
 function feltolt(tomb) {
