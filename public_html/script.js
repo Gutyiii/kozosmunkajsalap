@@ -30,6 +30,18 @@ function dolgozz() {
     document.getElementById("eredmeny").innerHTML = "Az eredmény: <br> " + tomb.join("; ");
 
     osszegzes(tomb);
+    otteloszthato(tomb);
+    paros(tomb)
+}
+
+function otteloszthato(tomb) {
+    var otteloszthatoszamok = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 5 === 0) {
+            otteloszthatoszamok++;
+        }
+    }
+    document.getElementById("otszam").innerHTML = "Az 5-el oszthato számokból van: " + otteloszthatoszamok;
 }
 
 function osszegzes(tomb) {
