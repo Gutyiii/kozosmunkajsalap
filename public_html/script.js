@@ -1,5 +1,12 @@
 //var nev = document.getElementById("adat").value;
 
+function paros(tomb) {
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 2 === 0) {            
+        }
+    } document.getElementById("parosSzamok").innerHTML = "A páros számok: " + i;
+}
+
 function feltolt(tomb) {
     var darab = Number(document.getElementById("adat").value);
 //    tomb[0]=1;
@@ -17,7 +24,7 @@ function dolgozz() {
 //    alert("Jó reggelt " + nev);                                         fenti kis ablkaba írja ki
 //    document.getElementById("szoveg").innerHTML = "Jó reggelt " + nev;  //p tagbe irja ki
 //    console.log("Hello");                                               consolra kiiras
-
+    paros(tomb);
     feltolt(tomb);
     console.log(tomb);
     document.getElementById("eredmeny").innerHTML = "Az eredmény: <br> " + tomb.join("; ");
