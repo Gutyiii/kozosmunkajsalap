@@ -36,7 +36,7 @@ function dolgozz() {
     max(tomb);
 
     otteloszthato(tomb);
-    paros(tomb)
+    paros(tomb);
 }
 
 function otteloszthato(tomb) {
