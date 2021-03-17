@@ -1,5 +1,12 @@
 //var nev = document.getElementById("adat").value;
 
+function paros(tomb) {
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 2 === 0) {            
+        }
+    } document.getElementById("parosSzamok").innerHTML = "A páros számok: " + i;
+}
+
 function feltolt(tomb) {
     var darab = Number(document.getElementById("adat").value);
 //    tomb[0]=1;
@@ -17,13 +24,28 @@ function dolgozz() {
 //    alert("Jó reggelt " + nev);                                         fenti kis ablkaba írja ki
 //    document.getElementById("szoveg").innerHTML = "Jó reggelt " + nev;  //p tagbe irja ki
 //    console.log("Hello");                                               consolra kiiras
-
+    paros(tomb);
     feltolt(tomb);
     console.log(tomb);
     document.getElementById("eredmeny").innerHTML = "Az eredmény: <br> " + tomb.join("; ");
 
     osszegzes(tomb);
+
     max(tomb);
+
+    otteloszthato(tomb);
+    paros(tomb)
+}
+
+function otteloszthato(tomb) {
+    var otteloszthatoszamok = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 5 === 0) {
+            otteloszthatoszamok++;
+        }
+    }
+    document.getElementById("otszam").innerHTML = "Az 5-el oszthato számokból van: " + otteloszthatoszamok;
+
 }
 
 function osszegzes(tomb) {
