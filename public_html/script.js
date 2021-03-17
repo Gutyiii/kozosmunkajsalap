@@ -23,6 +23,7 @@ function dolgozz() {
     document.getElementById("eredmeny").innerHTML = "Az eredmény: <br> " + tomb.join("; ");
 
     osszegzes(tomb);
+    max(tomb);
 }
 
 function osszegzes(tomb) {
@@ -42,3 +43,13 @@ function init() {
 }
 
 
+function max(tomb){
+    var index=1;
+    for (var i = 0; i < tomb.length; i++) {
+        if(tomb[i]>tomb[index]){
+            index=i;
+        }
+    }
+    var ered=tomb[index];
+    document.getElementById("max").innerHTML="A legnagyobb " + ered;
+}
